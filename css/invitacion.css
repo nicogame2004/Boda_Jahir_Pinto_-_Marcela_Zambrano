@@ -162,7 +162,7 @@ html, body {
   color: #8a8a8a;
 }
 
-.invitation-photo{
+.invitation-photo-itinerary{
   margin: 40px auto 0;
   max-width: 920px;
   padding: 0 20px;
@@ -181,4 +181,121 @@ html, body {
   margin-bottom: 18px;
   color: #5c5c5c;
 }
+
+.invitation-photo-itinerary1{
+  margin: 40px auto 0;
+  max-width: 920px;
+  padding: 0 20px;
+}
+
+.invitation-photo__img1{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+
+/* Sección eventos */
+.events{
+  width: 100%;
+  padding: 70px 16px;
+  /*background: */
+}
+
+.events__grid{
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+.event-card{
+  background: rgba(196, 206, 205, 0.35);
+  border-radius: 16px;
+  padding: 34px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* misma altura */
+  min-height: 320px;
+}
+
+.event-card__title{
+  margin: 0 0 18px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #6b6b6b;
+}
+
+.event-card__icon{
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 18px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #999;
+  border: 1px dashed rgba(0,0,0,0.2);
+  font-size: 14px;
+}
+
+.event-card__place{
+  margin: 0;
+  color: #6b6b6b;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.event-card__time{
+  margin: 10px 0 0;
+  color: #6b6b6b;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.event-card__btn{
+  margin: 22px auto 0;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #6f846f;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.event-card__btn:hover{
+  opacity: 0.92;
+}
+
+/* Celular: una debajo de la otra */
+@media (max-width: 700px){
+  .events__grid{
+    grid-template-columns: 1fr;
+  }
+  .event-card{
+    min-height: auto;
+  }
+}
+
+.event-card__iconIgl {
+  width: 35%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; 
+  border-radius: 18px;
+}
+
+.event-card__iconRec {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; 
+  border-radius: 18px;
+}
+
+
 
