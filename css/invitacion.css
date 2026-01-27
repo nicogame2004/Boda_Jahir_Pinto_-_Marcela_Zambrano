@@ -162,4 +162,23 @@ html, body {
   color: #8a8a8a;
 }
 
+.invitation-photo{
+  margin: 40px auto 0;
+  max-width: 920px;
+  padding: 0 20px;
+}
+
+.invitation-photo__img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+
+.invitation-text__itinerary{
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 400;
+  margin-bottom: 18px;
+  color: #5c5c5c;
+}
 
