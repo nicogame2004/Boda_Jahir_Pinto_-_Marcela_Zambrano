@@ -25,34 +25,38 @@
   <!-- Fecha -->
   <h2 class="hero__date" id="weddingDateText"></h2>
 
-  <!-- Contador -->
-  <div class="countdown" aria-label="Cuenta regresiva al matrimonio">
-    <div class="countdown__box">
-      <span class="countdown__num" id="cdDays">--</span>
-      <span class="countdown__label">Días</span>
-    </div>
-
-      <span class="countdown__sep">:</span>
-
-    <div class="countdown__box">
-      <span class="countdown__num" id="cdHours">--</span>
-      <span class="countdown__label">Horas</span>
-    </div>
-
-      <span class="countdown__sep">:</span>
-
-    <div class="countdown__box">
-      <span class="countdown__num" id="cdMins">--</span>
-      <span class="countdown__label">Minutos</span>
-    </div>
-
-      <span class="countdown__sep">:</span>
-
-    <div class="countdown__boxs">
-      <span class="countdown__num" id="cdSecs">--</span>
-      <span class="countdown__label">Segundos</span>
-    </div>
+ <!-- Contador -->
+<div class="countdown" aria-label="Cuenta regresiva al matrimonio">
+  <div class="countdown__box">
+    <span class="countdown__num" id="cdDays">--</span>
+    <span class="countdown__label">Días</span>
   </div>
+
+  <!-- ESTE será el ":" de la fila de arriba en móvil -->
+  <span class="countdown__sep countdown__sep--top">:</span>
+
+  <div class="countdown__box">
+    <span class="countdown__num" id="cdHours">--</span>
+    <span class="countdown__label">Horas</span>
+  </div>
+
+  <!-- ESTE solo lo usará PC (en móvil se oculta) -->
+  <span class="countdown__sep">:</span>
+
+  <div class="countdown__box">
+    <span class="countdown__num" id="cdMins">--</span>
+    <span class="countdown__label">Minutos</span>
+  </div>
+
+  <!-- ESTE será el ":" de la fila de abajo en móvil -->
+  <span class="countdown__sep countdown__sep--bottom">:</span>
+
+  <div class="countdown__boxs">
+    <span class="countdown__num" id="cdSecs">--</span>
+    <span class="countdown__label">Segundos</span>
+  </div>
+</div>
+
 
   <section class="invitation-text">
   <h3 class="invitation-text__guest">Invitado Especial</h3>
@@ -148,6 +152,39 @@
   <button class="lightbox__close" aria-label="Cerrar">✕</button>
   <img id="lightboxImg" class="lightbox__img" src="" alt="Foto ampliada">
 </div>
+
+<section class="love-quote">
+  <span class="love-quote__marks">“ ”</span>
+
+  <p class="love-quote__text">
+    El hombre y la mujer fueron creados el uno para el otro:
+    <em>“No es bueno que el hombre esté solo”</em> (Gn 2, 18).
+    Por eso deja el hombre a su padre y a su madre y se une a su mujer,
+    y se hacen una sola carne.
+  </p>
+</section>
+
+
+<section class="fiesta">
+  <h2 class="fiesta__title">Nuestra<br>Fiesta</h2>
+
+  <p class="fiesta__subtitle">
+    Detalles para tener en cuenta el día<br>de la boda.
+  </p>
+
+  <h3 class="fiesta__dress">Codigo de Vestimenta</h3>
+
+ <div class="invitation-photo-rop">
+  <img src="assets/icons/pareja.png" alt="Foto de los novios" class="invitation-photo__img">
+</div>
+
+  <p class="fiesta__roles"><strong>MUJERES</strong> --- <strong>HOMBRE</strong></p>
+  <p class="fiesta__desc">Vestido formal --- Vestido formal</p>
+
+  <button id="btnVestimenta" class="fiesta__btn" type="button">
+    Recomendaciones
+  </button>
+</section>
 
 
 </section>

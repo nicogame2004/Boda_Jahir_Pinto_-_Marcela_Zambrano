@@ -49,6 +49,7 @@ async function navigate(viewName) {
 
   if (viewName === "sobre" && window.initSobre) window.initSobre();
   if (viewName === "invitacion" && window.initInvitacion) window.initInvitacion();
+  if (viewName === "vestimenta" && window.initVestimenta) window.initVestimenta();
 }
 
 window.navigate = navigate;

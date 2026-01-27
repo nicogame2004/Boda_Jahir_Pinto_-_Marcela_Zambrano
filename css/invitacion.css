@@ -62,27 +62,72 @@
   justify-content: center;
 }
 
+/* separador en PC: se ve normal */
 .countdown__sep{
   font-size: 42px;
   font-weight: 600;
   color: #B69E8E;
   line-height: 1;
-  margin-top: 12px; /* sube un poquito el : */
+  position: relative;
+  top: 12px; /* ajusta si lo quieres un poco más abajo */
 }
 
-/* responsive: ocultar ":" si se rompe en móvil */
 @media (max-width: 480px){
-  .countdown__sep{
-    display: none;
+
+  .countdown{
+    display: grid;
+    grid-template-columns: 110px 24px 110px;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 22px;
+    justify-content: center;
+    align-items: center;
   }
+
+  /* ubicaciones grid (cajas) */
+  .countdown__box:nth-of-type(1){ grid-column: 1; grid-row: 1; }
+  .countdown__box:nth-of-type(2){ grid-column: 3; grid-row: 1; }
+  .countdown__box:nth-of-type(3){ grid-column: 1; grid-row: 2; }
+  .countdown__boxs{               grid-column: 3; grid-row: 2; }
+
+  /* Oculta TODOS */
+  .countdown__sep{
+    display: none !important;
+  }
+
+  /* Muestra SOLO estos dos */
+  .countdown__sep--top{
+    display: block !important;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+    top: 0;
+  }
+
+  .countdown__sep--bottom{
+    display: block !important;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    top: 0;
+  }
+
+  .countdown__sep--top,
+.countdown__sep--bottom{
+  transform: translateY(-6px); /* 🔼 súbelos */
 }
+
+}
+
 
 .countdown__box{
   width: 110px;
   padding: 14px 10px;
   border-radius: 10px;
-  /*background: #C4CECD; /* verde suave */
-  color: #B69E8E;
+  /*background: #C4CECD;*/
+  color: #6D808F;
 }
 
 
@@ -91,7 +136,7 @@
   padding: 14px 10px;
   border-radius: 10px;
   /*background: #C4CECD; /* verde suave */
-  color: #F5D9C1;
+  color: #B69E8E;
 }
 
 .countdown__num{
@@ -423,3 +468,97 @@ html, body {
   to{ transform: scale(1); opacity: 1; }
 }
 
+
+.love-quote{
+ /* background: #F6F4EC; */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.love-quote__marks{
+  display: block;
+  font-size: 42px;
+  color: #7C8F7A;
+  margin-bottom: 18px;
+}
+
+.love-quote__text{
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Playfair Display", "Georgia", serif;
+  font-style: italic;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.8;
+  color: #7A7A7A;
+}
+
+.fiesta{
+  padding: 80px 16px;
+  text-align: center;
+ /* background: #F6F4EC; */
+}
+
+.fiesta__title{
+  margin: 0;
+  font-size: clamp(34px, 6vw, 56px);
+  line-height: 1.05;
+  color: #6f846f;
+  font-weight: 500;
+}
+
+.fiesta__subtitle{
+  margin: 16px 0 30px;
+  color: #8a8a8a;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.fiesta__dress{
+  margin: 0 0 18px;
+  font-size: clamp(28px, 5vw, 44px);
+  color: #9a9a9a;
+  font-weight: 400;
+}
+
+.fiesta__icon{
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  color: #b0b0b0;
+  border: 1px dashed rgba(0,0,0,0.2);
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+.fiesta__roles{
+  margin: 0;
+  color: #9a9a9a;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.fiesta__desc{
+  margin: 10px 0 24px;
+  color: #9a9a9a;
+}
+
+.fiesta__btn{
+  border: 0;
+  background: #6f846f;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.fiesta__btn:hover{
+  opacity: 0.92;
+}
+
+.invitation-photo-rop{
+  width: 25%;
+  margin: 12px auto 0;
+  max-width: 920px;
+  padding: 12 20px;
+}

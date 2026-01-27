@@ -92,4 +92,13 @@ window.initInvitacion = function () {
       }
     });
   }
+
+  const btnVestimenta = document.getElementById("btnVestimenta");
+if (btnVestimenta) {
+  btnVestimenta.addEventListener("click", () => {
+    window.navigate("vestimenta");
+  });
+}
+
+
 };
