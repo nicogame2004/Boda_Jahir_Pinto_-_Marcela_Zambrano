@@ -10,7 +10,7 @@
   margin: 0 0 24px;
   font-size: clamp(28px, 5vw, 56px);
   letter-spacing: 2px;
-  color: #fff;
+  color: #B69E8E;
   text-transform: uppercase;
 }
 
@@ -26,8 +26,8 @@
   width: 110px;
   padding: 14px 10px;
   border-radius: 10px;
-  background: rgba(111, 132, 111, 0.85); /* verde suave */
-  color: #fff;
+  background: #C4CECD; /* verde suave */
+  color: #B69E8E;
 }
 
 .countdown__num{
