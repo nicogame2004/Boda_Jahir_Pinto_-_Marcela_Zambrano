@@ -4,7 +4,47 @@
   place-items: center;
   text-align: center;
   padding: 60px 16px;
+  gap: 18px;
 }
+
+/* Nombres */
+.hero__names{
+  margin: 0;
+  font-size: clamp(40px, 7vw, 90px);
+  letter-spacing: 2px;
+  color: #B69E8E; /* ✅ mismo color de números */
+  text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1;
+}
+
+.hero__names span{
+  font-weight: 400;
+}
+
+/* Video */
+.hero__video{
+  width: min(900px, 92vw);
+}
+
+.hero__videoEl{
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  background: #000;
+}
+
+/* Fecha (ya la tienes, solo confirmo color) */
+.hero__date{
+  margin: 0;
+  font-size: clamp(28px, 5vw, 56px);
+  letter-spacing: 2px;
+  color: #B69E8E;
+  text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
 
 .hero__date{
   margin: 0 0 24px;
@@ -82,5 +122,14 @@
   .countdown__num{
     font-size: 36px;
   }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 

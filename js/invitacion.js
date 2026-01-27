@@ -1,7 +1,7 @@
 window.initInvitacion = function () {
   // Fecha objetivo: 18 Julio 2026 (ajusta hora si quieres)
   // IMPORTANTE: usamos formato ISO para evitar errores de idioma.
-  const target = new Date("2026-07-18T00:00:00-05:00"); // Colombia -05:00
+  const target = new Date("2026-07-18T16:30:00-05:00"); // Colombia -05:00
 
   const elDateText = document.getElementById("weddingDateText");
   const elDays = document.getElementById("cdDays");
@@ -57,6 +57,6 @@ window.initInvitacion = function () {
   });
 
   console.log("🎵 Música de invitación iniciada");
-  
+
 };
 
