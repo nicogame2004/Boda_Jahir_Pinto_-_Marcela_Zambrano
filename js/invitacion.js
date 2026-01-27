@@ -1,7 +1,6 @@
 window.initInvitacion = function () {
-  // Fecha objetivo: 18 Julio 2026 (ajusta hora si quieres)
-  // IMPORTANTE: usamos formato ISO para evitar errores de idioma.
-  const target = new Date("2026-07-18T16:30:00-05:00"); // Colombia -05:00
+  // Fecha objetivo: 18 Julio 2026 a las 4:30 PM (Colombia -05:00)
+  const target = new Date("2026-07-18T16:30:00-05:00");
 
   const elDateText = document.getElementById("weddingDateText");
   const elDays = document.getElementById("cdDays");
@@ -26,10 +25,10 @@ window.initInvitacion = function () {
     let diffMs = target.getTime() - now.getTime();
 
     if (diffMs <= 0) {
-      elDays.textContent = "0";
-      elHours.textContent = "00";
-      elMins.textContent = "00";
-      elSecs.textContent = "00";
+      if (elDays) elDays.textContent = "0";
+      if (elHours) elHours.textContent = "00";
+      if (elMins) elMins.textContent = "00";
+      if (elSecs) elSecs.textContent = "00";
       return;
     }
 
@@ -39,24 +38,58 @@ window.initInvitacion = function () {
     const mins = Math.floor((totalSec % 3600) / 60);
     const secs = totalSec % 60;
 
-    elDays.textContent = String(days);
-    elHours.textContent = pad2(hours);
-    elMins.textContent = pad2(mins);
-    elSecs.textContent = pad2(secs);
+    if (elDays) elDays.textContent = String(days);
+    if (elHours) elHours.textContent = pad2(hours);
+    if (elMins) elMins.textContent = pad2(mins);
+    if (elSecs) elSecs.textContent = pad2(secs);
   }
 
   tick();
   setInterval(tick, 1000);
 
-    const audio = document.getElementById("bgm");
-  if (!audio) return;
+  // 🎵 Música
+  const audio = document.getElementById("bgm");
+  if (audio) {
+    audio.volume = 0.6;
+    audio.play().catch(err => {
+      console.warn("Autoplay bloqueado:", err);
+    });
+    console.log("🎵 Música de invitación iniciada");
+  }
 
-  audio.volume = 0.6; // opcional
-  audio.play().catch(err => {
-    console.warn("Autoplay bloqueado:", err);
-  });
+  // ==========================
+  // 📸 Lightbox (agrandar fotos)
+  // ==========================
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const closeBtn = document.querySelector(".lightbox__close");
 
-  console.log("🎵 Música de invitación iniciada");
+  // Si aún no pegaste el HTML del lightbox, no rompe
+  if (lightbox && lightboxImg && closeBtn) {
+    document.querySelectorAll(".love-gallery__img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add("is-active");
+        document.body.style.overflow = "hidden";
+      });
+    });
 
+    function closeLightbox() {
+      lightbox.classList.remove("is-active");
+      document.body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // cerrar con ESC (PC)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.classList.contains("is-active")) {
+        closeLightbox();
+      }
+    });
+  }
 };
-

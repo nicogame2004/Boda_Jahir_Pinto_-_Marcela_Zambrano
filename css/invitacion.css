@@ -12,7 +12,7 @@
   margin: 0;
   font-size: clamp(40px, 7vw, 90px);
   letter-spacing: 2px;
-  color: #B69E8E; /* ✅ mismo color de números */
+  color: #B69E8E; 
   text-transform: uppercase;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1;
@@ -297,5 +297,105 @@ html, body {
   border-radius: 18px;
 }
 
+.invitation-text__Love{
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: #5c5c5c;
+}
 
+.invitation-photo-cam{
+  width: 20%;
+  margin: 6px auto 0;
+  max-width: 920px;
+  padding: 0 20px;
+}
+
+.love-gallery{
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.love-gallery__grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.love-gallery__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ✨ efecto suave al pasar el mouse (PC) */
+.love-gallery__img:hover{
+  transform: scale(1.02);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px){
+  .love-gallery__grid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+
+/* Lightbox fondo */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 9999;
+}
+
+/* activo */
+.lightbox.is-active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* imagen ampliada */
+.lightbox__img{
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: zoomIn 0.35s ease;
+}
+
+/* botón cerrar */
+.lightbox__close{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* animación */
+@keyframes zoomIn{
+  from{ transform: scale(0.9); opacity: 0; }
+  to{ transform: scale(1); opacity: 1; }
+}
 
