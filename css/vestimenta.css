@@ -1,71 +1,122 @@
-.vestimenta{
+.vestimenta-page{
   min-height: 100vh;
   background: #F6F4EC;
-  display: grid;
-  place-items: center;
   padding: 70px 16px;
+}
+
+.vestimenta-wrap{
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.vestimenta__content{
-  width: 100%;
-  max-width: 720px;
-}
-
-.vestimenta__title{
-  margin: 0;
-  font-size: clamp(34px, 6vw, 56px);
-  line-height: 1.05;
-  color: #6f846f;
+/* Título tipo “script” */
+.vestimenta__script{
+  margin: 0 0 10px;
+  font-size: clamp(34px, 6vw, 54px);
+  color: #B69E8E;
   font-weight: 500;
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-style: italic;
 }
 
-.vestimenta__subtitle{
-  margin: 16px 0 30px;
-  color: #8a8a8a;
-  font-size: 16px;
-  line-height: 1.4;
+/* Título principal */
+.vestimenta__title{
+  margin: 0 0 28px;
+  font-size: clamp(20px, 3.5vw, 28px);
+  letter-spacing: 4px;
+  color: #B69E8E;
+  font-weight: 600;
 }
 
-.vestimenta__dress{
-  margin: 0 0 18px;
-  font-size: clamp(28px, 5vw, 44px);
-  color: #9a9a9a;
-  font-weight: 400;
+/* Bloque pareja + texto */
+.vestimenta__row{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  margin: 18px auto 34px;
+  text-align: left;
 }
 
-.vestimenta__icon{
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 18px;
+.vestimenta__imgBox{
   display: grid;
   place-items: center;
-  color: #b0b0b0;
-  border: 1px dashed rgba(0,0,0,0.2);
-  border-radius: 14px;
-  font-size: 14px;
 }
 
-.vestimenta__roles{
-  margin: 0;
-  color: #9a9a9a;
-  font-weight: 700;
-  letter-spacing: 1px;
+.vestimenta__img{
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  display: block;
 }
 
-.vestimenta__desc{
-  margin: 10px 0 24px;
-  color: #9a9a9a;
+.vestimenta__text p{
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
 }
 
+.vestimenta__text strong{
+  color: #111;
+}
+
+/* Subtítulos */
+.vestimenta__sub{
+  margin: 22px 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+}
+
+/* Párrafos */
+.vestimenta__p{
+  margin: 0 auto;
+  max-width: 820px;
+  color: #555;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+/* Paleta (imagen prueba8) */
+.vestimenta__palette{
+  margin: 26px auto 10px;
+  display: grid;
+  place-items: center;
+}
+
+.vestimenta__paletteImg{
+  width: min(520px, 92vw);
+  height: auto;
+  display: block;
+}
+
+/* Botón volver */
 .vestimenta__btn{
+  margin-top: 30px;
   border: 0;
   background: #6f846f;
-  color: white;
+  color: #fff;
   padding: 10px 22px;
   border-radius: 999px;
   cursor: pointer;
 }
-.vestimenta__btn:hover{
-  opacity: 0.92;
+.vestimenta__btn:hover{ opacity: .92; }
+
+/* Responsive */
+@media (max-width: 760px){
+  .vestimenta__row{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .vestimenta__text{
+    text-align: center;
+  }
+
+  .vestimenta__img{
+    max-width: 220px;
+  }
 }
