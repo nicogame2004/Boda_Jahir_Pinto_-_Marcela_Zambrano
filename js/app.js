@@ -1,7 +1,7 @@
 const app = document.getElementById("app");
 
 async function loadView(viewName) {
-  const res = await fetch(`pages/${viewName}.html`);
+  const res = await fetch(`./pages/${viewName}.html`);
   if (!res.ok) throw new Error(`No pude cargar pages/${viewName}.html`);
   app.innerHTML = await res.text();
 }
