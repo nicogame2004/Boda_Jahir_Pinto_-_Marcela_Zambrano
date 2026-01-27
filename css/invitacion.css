@@ -62,12 +62,36 @@
   justify-content: center;
 }
 
+.countdown__sep{
+  font-size: 42px;
+  font-weight: 600;
+  color: #B69E8E;
+  line-height: 1;
+  margin-top: 12px; /* sube un poquito el : */
+}
+
+/* responsive: ocultar ":" si se rompe en móvil */
+@media (max-width: 480px){
+  .countdown__sep{
+    display: none;
+  }
+}
+
 .countdown__box{
   width: 110px;
   padding: 14px 10px;
   border-radius: 10px;
-  background: #C4CECD; /* verde suave */
+  /*background: #C4CECD; /* verde suave */
   color: #B69E8E;
+}
+
+
+.countdown__boxs{
+  width: 110px;
+  padding: 14px 10px;
+  border-radius: 10px;
+  /*background: #C4CECD; /* verde suave */
+  color: #F5D9C1;
 }
 
 .countdown__num{
