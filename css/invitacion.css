@@ -44,8 +44,43 @@
   opacity: 0.95;
 }
 
-/* responsive */
-@media (max-width: 480px){
-  .countdown__box{ width: 92px; }
-  .countdown__num{ font-size: 38px; }
+/* responsive (celular: 2x2 fijo) */
+@media (max-width: 520px){
+  .countdown{
+    max-width: 260px;   /* fuerza 2 cajas por fila */
+    margin: 0 auto;
+    gap: 14px;
+  }
+
+  .countdown__box{
+    width: 120px;       /* 2 por fila */
+    padding: 14px 10px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .countdown__num{
+    font-size: 40px;
+  }
+
+  .countdown__label{
+    font-size: 13px;
+  }
 }
+
+/* celulares muy pequeños */
+@media (max-width: 360px){
+  .countdown{
+    max-width: 230px;
+    gap: 12px;
+  }
+
+  .countdown__box{
+    width: 105px;
+  }
+
+  .countdown__num{
+    font-size: 36px;
+  }
+}
+
