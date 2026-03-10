@@ -82,7 +82,7 @@
 
 /* Paleta (imagen prueba8) */
 .vestimenta__palette{
-  margin: 26px auto 10px;
+  margin: 10px auto 10px;
   display: grid;
   place-items: center;
 }
