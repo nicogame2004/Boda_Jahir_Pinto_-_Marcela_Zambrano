@@ -8,19 +8,19 @@
   <!-- Video (por ahora de prueba) -->
   <div class="hero__video">
   <video
-  id="weddingVideo"
-  class="hero__videoEl"
-  src="assets/video/prueba.mp4"
-  controls
-  autoplay
-  loop
-  muted
-  playsinline
-  preload="metadata"
->
-      Tu navegador no soporta video.
-    </video>
-  </div>
+    id="weddingVideo"
+    class="hero__videoEl"
+    controls
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="metadata"
+  >
+    <source src="assets/video/video1.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+</div>
 
   <!-- Fecha -->
   <h2 class="hero__date" id="weddingDateText"></h2>
@@ -59,7 +59,6 @@
 
 
   <section class="invitation-text">
-  <h3 class="invitation-text__guest">Invitado Especial</h3>
 
   <h2 class="invitation-text__title">¡Nos Casamos!</h2>
 
@@ -72,7 +71,6 @@
   </p>
 </section>
 
-<h3 class="invitation-text__itinerary">Invitado Especial</h3>
 
 <div class="invitation-photo-itinerary">
   <img src="assets/fotos/prueba1.png" alt="Foto de los novios" class="invitation-photo__img">
@@ -163,7 +161,7 @@
 </section>
 
 
-<section class="fiesta">
+<section class="fiesta" id="dresscode">
   <h2 class="fiesta__title">Nuestra<br>Fiesta</h2>
 
   <p class="fiesta__subtitle">

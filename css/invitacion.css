@@ -220,7 +220,7 @@ html, body {
   font-size: clamp(28px, 5vw, 44px);
   font-weight: 600;
   margin-bottom: 28px;
-  color: #6f846f; /* verde elegante */
+  color: #6D808F; /* verde elegante */
 }
 
 .invitation-text__message{
@@ -329,7 +329,7 @@ html, body {
   display: inline-block;
   padding: 10px 18px;
   border-radius: 999px;
-  background: #6f846f;
+  background: #B69E8E;
   color: #fff;
   text-decoration: none;
   font-size: 14px;
@@ -370,7 +370,7 @@ html, body {
   font-size: clamp(22px, 4vw, 34px);
   font-weight: 400;
   margin-bottom: 6px;
-  color: #5c5c5c;
+  color: #6D808F;
 }
 
 .invitation-photo-cam{
@@ -502,7 +502,7 @@ html, body {
   margin: 0;
   font-size: clamp(34px, 6vw, 56px);
   line-height: 1.05;
-  color: #6f846f;
+  color: #6D808F;
   font-weight: 500;
 }
 
@@ -548,7 +548,7 @@ html, body {
 
 .fiesta__btn{
   border: 0;
-  background: #6f846f;
+  background: #B69E8E;
   color: white;
   padding: 10px 22px;
   border-radius: 999px;
@@ -574,7 +574,7 @@ html, body {
 
 .music-section__title{
   font-size: clamp(22px, 4vw, 32px);
-  color: #8fa79a;
+  color: #6D808F;
   margin-bottom: 20px;
 }
 
@@ -600,7 +600,7 @@ html, body {
   display: inline-block;
   padding: 10px 18px;
   border-radius: 999px;
-  background: #6f846f;
+  background: #B69E8E;
   color: #fff;
   text-decoration: none;
   font-size: 20px;
@@ -609,7 +609,7 @@ html, body {
 }
 
 .music-section__btn:hover{
-  background: #6b7f6a;
+  background: #B69E8E;
 }
 
 /*.share-photos{
@@ -644,14 +644,14 @@ html, body {
 .share-photos__text{
   font-size: 20px;
   line-height: 1.6;
-  color: #B69E8E;
+  color: #8a8a8a;
   margin-bottom: 28px;
 }
 
 .share-photos__btn{
   display: inline-block;
   padding: 12px 28px;
-  background: #7b8f7a;
+  background: #B69E8E;
   color: #fff;
   border-radius: 30px;
   font-size: 20px;
@@ -660,7 +660,7 @@ html, body {
 }
 
 .share-photos__btn:hover{
-  background: #6a7d69;
+  background: #B69E8E;
   transform: translateY(-2px);
 }
 
@@ -700,7 +700,7 @@ html, body {
 .share-sobre__text{
   font-size: 20px;
   line-height: 1.6;
-  color: #B69E8E;
+  color: #8a8a8a;
   margin-bottom: 28px;
 }
 
@@ -726,7 +726,7 @@ html, body {
 .rsvp__title{
   margin: 0;
   font-size: clamp(30px, 5vw, 44px);
-  color: #6f846f;
+  color: #6D808F;
   font-weight: 500;
 }
 
@@ -740,7 +740,7 @@ html, body {
 .rsvp__heading{
   margin: 0 0 18px;
   font-size: clamp(28px, 5vw, 42px);
-  color: #9a9a9a;
+  color: #6D808F;
   font-weight: 400;
 }
 
@@ -767,7 +767,7 @@ html, body {
   display: inline-block;
   padding: 12px 26px;
   border-radius: 999px;
-  background: #6f846f;
+  background: #B69E8E;
   color: #fff;
   text-decoration: none;
   font-size: 20px;
